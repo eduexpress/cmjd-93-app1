@@ -9,6 +9,7 @@ const routes: Routes = [
   {path: 'about', loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule)},
 
   {path: 'gallery', loadChildren: () => import('./modules/gallery/gallery.module').then(m => m.GalleryModule)},
+  {path: 'customer', loadChildren: () => import('./modules/customer/customer.module').then(m => m.CustomerModule)},
   {path: '**', component: NotFoundComponent}
 ];
 
