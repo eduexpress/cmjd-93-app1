@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -7,15 +7,18 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  parsedId: string | null = '';
+
+  @Output() nameEmitter: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(private activatedRoute: ActivatedRoute) {
   }
 
+  keyUp(value: string): void {
+    this.nameEmitter.emit(value);
+  }
+
   ngOnInit(): void {
-    this.activatedRoute.paramMap.subscribe(response => {
-      this.parsedId = response.get('id');
-    })
+
   }
 
 }

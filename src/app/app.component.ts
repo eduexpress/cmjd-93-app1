@@ -7,13 +7,12 @@ import {Router} from "@angular/router";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  id: string = '';
+  data: string = '';
 
   constructor(private router: Router) {
   }
 
-  navigate(link: string) {
-    //this.router.navigateByUrl(link+'/15');
-    this.router.navigate([link,this.id]);
+  setData(data:string){
+    this.data=data;
   }
 }
