@@ -7,6 +7,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { AboutComponent } from './components/about/about.component';
 import {RouterModule} from "@angular/router";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {RouterModule} from "@angular/router";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

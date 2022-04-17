@@ -5,7 +5,7 @@ import {GalleryComponent} from "./components/gallery/gallery.component";
 import {AboutComponent} from "./components/about/about.component";
 
 const routes: Routes = [
-  {path: 'contact', component: ContactComponent},
+  {path: 'contact/:id', component: ContactComponent},
   {path: 'about', component: AboutComponent},
   {path: 'gallery', component: GalleryComponent},
 ];

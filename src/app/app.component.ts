@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -7,11 +7,13 @@ import {Router} from "@angular/router";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  id: string = '';
 
-  constructor(private router:Router) {
+  constructor(private router: Router) {
   }
 
   navigate(link: string) {
-    this.router.navigateByUrl(link);
+    //this.router.navigateByUrl(link+'/15');
+    this.router.navigate([link,this.id]);
   }
 }
