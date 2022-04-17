@@ -3,6 +3,16 @@
   <br>
   <br>
 
+  <form [formGroup]="searchForm">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <input formControlName="search" type="search" matInput [matAutocomplete]="auto" (keyup.enter)="searchUniqueData()">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of dataArray" [value]="option.name">
+        {{option.name}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  </form>
 
   <form [formGroup]="customerForm" (ngSubmit)="updateCustomer()">
 
