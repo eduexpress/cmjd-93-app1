@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -7,12 +7,13 @@ import {Router} from "@angular/router";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  data: string = '';
+
+  name: string = '';
 
   constructor(private router: Router) {
   }
 
-  setData(data:string){
-    this.data=data;
+  setData(value: string) {
+    this.name = value;
   }
 }

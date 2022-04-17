@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -8,17 +8,9 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class ContactComponent implements OnInit {
 
-  @Output() nameEmitter: EventEmitter<any> = new EventEmitter<any>();
-
-  constructor(private activatedRoute: ActivatedRoute) {
-  }
-
-  keyUp(value: string): void {
-    this.nameEmitter.emit(value);
-  }
+  @Input() selectedName='';
 
   ngOnInit(): void {
-
   }
 
 }

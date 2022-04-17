@@ -1,6 +1,6 @@
 <div class="main" style="height: 250px; border:1px solid red">
-  {{data}}
+  <input type="text" #element (keyup)="setData(element.value)">
 </div>
 <hr>
-<app-contact (nameEmitter)="setData($event)"></app-contact>
+<app-contact [selectedName]="name"></app-contact>
 <router-outlet></router-outlet>
