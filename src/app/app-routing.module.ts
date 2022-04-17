@@ -1,13 +1,15 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {ContactComponent} from "./components/contact/contact.component";
-import {GalleryComponent} from "./components/gallery/gallery.component";
-import {AboutComponent} from "./components/about/about.component";
+import {NotFoundComponent} from "./components/not-found/not-found.component";
 
 const routes: Routes = [
-  {path: 'contact/:id', component: ContactComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'gallery', component: GalleryComponent},
+  {path: '', redirectTo: 'contact', pathMatch: 'full'},
+  {path: 'contact', loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule)},
+
+  {path: 'about', loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule)},
+
+  {path: 'gallery', loadChildren: () => import('./modules/gallery/gallery.module').then(m => m.GalleryModule)},
+  {path: '**', component: NotFoundComponent}
 ];
 
 @NgModule({

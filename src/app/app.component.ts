@@ -7,13 +7,4 @@ import {Router} from "@angular/router";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  name: string = '';
-
-  constructor(private router: Router) {
-  }
-
-  setData(value: string) {
-    this.name = value;
-  }
 }

@@ -3,18 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { GalleryComponent } from './components/gallery/gallery.component';
-import { AboutComponent } from './components/about/about.component';
 import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent,
-    GalleryComponent,
-    AboutComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

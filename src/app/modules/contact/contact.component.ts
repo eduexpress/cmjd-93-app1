@@ -1,5 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -8,7 +7,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class ContactComponent implements OnInit {
 
-  @Input() selectedName='';
+  constructor() { }
 
   ngOnInit(): void {
   }
